@@ -6,6 +6,8 @@ defmodule Security.Role do
   schema "roles" do
     field :name, :string
 
+    has_many :users, Security.User
+
     timestamps()
   end
 
