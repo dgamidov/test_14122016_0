@@ -7,6 +7,8 @@ defmodule Health.Patient do
     field :name, :string
     field :surname, :string
 
+    belongs_to :user, Health.User
+
     timestamps()
   end
 

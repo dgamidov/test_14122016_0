@@ -5,6 +5,7 @@ defmodule Health.Repo.Migrations.CreatePatient do
 
   def change do
     create table(:patients, prefix: @schema_prefix) do
+      add :user_id, :integer
       add :name, :string
       add :surname, :string
 
