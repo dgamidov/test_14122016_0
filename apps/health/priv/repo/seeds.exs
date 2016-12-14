@@ -9,3 +9,14 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Health.Repo
+alias Health.User
+alias Health.Patient
+
+user = Repo.get_by(User, username: "customer@test.com")
+
+%Patient{}
+|> Patient.changeset(%{name: "Alan", surname: "Turing"})
+|> Ecto.Changeset.put_assoc(:user, user)
+|> Repo.insert
