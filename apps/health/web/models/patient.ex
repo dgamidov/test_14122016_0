@@ -1,6 +1,8 @@
 defmodule Health.Patient do
   use Health.Web, :model
 
+  @schema_prefix Application.fetch_env!(:health, :schema_prefix)
+
   schema "patients" do
     field :name, :string
     field :surname, :string
