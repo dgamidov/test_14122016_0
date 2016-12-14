@@ -1,6 +1,8 @@
 defmodule Security.Role do
   use Security.Web, :model
 
+  @schema_prefix Application.fetch_env!(:security, :schema_prefix)
+
   schema "roles" do
     field :name, :string
 
