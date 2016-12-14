@@ -16,6 +16,24 @@ import_config "../apps/*/config/config.exs"
 #       format: "$date $time [$level] $metadata$message\n",
 #       metadata: [:user_id]
 
+# Configure your database
+config :security, Security.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "test_14122016_0",
+  hostname: "localhost",
+  pool_size: 10
+
+# Configure your database
+config :health, Health.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "test_14122016_0",
+  hostname: "localhost",
+  pool_size: 10
+
 config :security,
   schema_prefix: "security"
 
