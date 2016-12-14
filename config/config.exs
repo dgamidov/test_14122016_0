@@ -18,3 +18,6 @@ import_config "../apps/*/config/config.exs"
 
 config :security,
   schema_prefix: "security"
+
+config :health,
+  schema_prefix: "health"
